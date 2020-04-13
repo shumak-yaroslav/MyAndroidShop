@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener getBottomNavigationListener() {
+    /*private BottomNavigationView.OnNavigationItemSelectedListener getBottomNavigationListener() {
         return new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -62,6 +62,37 @@ public class Main2Activity extends AppCompatActivity {
                         Intent intent3 = new Intent(Main2Activity.this, Search.class);
                         startActivity(intent3);
                         break;
+                }
+                return true;
+            }
+        };
+
+
+    }*/
+
+    private BottomNavigationView.OnNavigationItemSelectedListener getBottomNavigationListener() {
+        return new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        return true;
+                    case R.id.action_search:
+                        startActivity(new Intent(getApplicationContext(),Discounts.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_notification:
+                        startActivity(new Intent(getApplicationContext(),Notification.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_coupons:
+                        startActivity(new Intent(getApplicationContext(),Search.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_user:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return true;
             }

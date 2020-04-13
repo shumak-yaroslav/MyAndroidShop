@@ -15,11 +15,16 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class Search extends AppCompatActivity {
+    private BottomNavigationView bnv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        bnv = (BottomNavigationView)findViewById(R.id.bottomNavigationView3);
+        bnv.setOnNavigationItemSelectedListener(getBottomNavigationListener());
+        bnv.setSelectedItemId(R.id.action_coupons);
 
     }
     private BottomNavigationView.OnNavigationItemSelectedListener getBottomNavigationListener() {
@@ -28,18 +33,24 @@ public class Search extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Intent intent11 = new Intent(Search.this, Main2Activity.class);
-                        startActivity(intent11);
-                        break;
-                    case R.id.action_user:
-                        Intent intent13 = new Intent(Search.this, MainActivity.class);
-                        startActivity(intent13);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Main2Activity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_search:
+                        startActivity(new Intent(getApplicationContext(),Discounts.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.action_notification:
-                        Intent intent12 = new Intent(Search.this, Notification.class);
-                        startActivity(intent12);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Notification.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_coupons:
 
+                        return true;
+                    case R.id.action_user:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return true;
             }

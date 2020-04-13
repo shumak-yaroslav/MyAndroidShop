@@ -181,7 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                /*Intent intent3 = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent3);*/
             }
         });
 
@@ -193,21 +194,23 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Intent intent3 = new Intent(MainActivity.this, Main2Activity.class);
-                        startActivity(intent3);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Main2Activity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.action_search:
-                        Intent intent4 = new Intent(MainActivity.this, Discounts.class);
-                        startActivity(intent4);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Discounts.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.action_notification:
-                        Intent intent5 = new Intent(MainActivity.this, Notification.class);
-                        startActivity(intent5);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Notification.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.action_coupons:
-                        Intent intent12 = new Intent(MainActivity.this, Search.class);
-                        startActivity(intent12);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Search.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_user:
+                        return true;
                 }
                 return true;
             }

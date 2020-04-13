@@ -15,11 +15,16 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class Notification extends AppCompatActivity {
+    private BottomNavigationView bnv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+        bnv = (BottomNavigationView)findViewById(R.id.bottomNavigationView3);
+        bnv.setOnNavigationItemSelectedListener(getBottomNavigationListener());
+        bnv.setSelectedItemId(R.id.action_notification);
 
     }
 
@@ -29,17 +34,23 @@ public class Notification extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Intent intent8 = new Intent(Notification.this, Main2Activity.class);
-                        startActivity(intent8);
-                        break;
-                    case R.id.action_user:
-                        Intent intent10 = new Intent(Notification.this, MainActivity.class);
-                        startActivity(intent10);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Main2Activity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.action_search:
-                        Intent intent9 = new Intent(Notification.this, Search.class);
-                        startActivity(intent9);
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Discounts.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_notification:
+                        return true;
+                    case R.id.action_coupons:
+                        startActivity(new Intent(getApplicationContext(),Search.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_user:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return true;
             }

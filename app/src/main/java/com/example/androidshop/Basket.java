@@ -62,8 +62,21 @@ public class Basket extends AppCompatActivity {
         Glide.with(getApplicationContext()).load(url1).into(img1);
         Glide.with(getApplicationContext()).load(url2).into(img2);
         Glide.with(getApplicationContext()).load(url3).into(img3);
-        Glide.with(getApplicationContext()).load(url2).into(img4);
+        Glide.with(getApplicationContext()).load(url4).into(img4);
+        imageClick();
 
+    }
+
+    public void imageClick () {
+        img.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Basket.this, Search.class);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 
     @Override

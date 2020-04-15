@@ -52,7 +52,22 @@ public class payment extends AppCompatActivity {
             loadImg( "https://firebasestorage.googleapis.com/v0/b/androidshopvlad.appspot.com/o/add%20card%2Fnext%202.png?alt=media&token=f8750004-a8eb-497d-bc71-47eaee5b6840",img1);
             loadImg( "https://firebasestorage.googleapis.com/v0/b/androidshopvlad.appspot.com/o/add%20card%2Fimage%2026.png?alt=media&token=ff0a6bd4-2299-4ebc-8cc9-741199399752",img2);
             loadImg( "https://firebasestorage.googleapis.com/v0/b/androidshopvlad.appspot.com/o/add%20card%2Fimage%2027.png?alt=media&token=b1379a57-229e-4adc-bf01-b0b2c5a38590",img3);
+            imageClick();
+
         }
+
+
+    public void imageClick () {
+        img.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(payment.this, Basket.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
 
 
 

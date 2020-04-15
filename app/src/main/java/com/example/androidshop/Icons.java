@@ -1,7 +1,7 @@
 package com.example.androidshop;
 
 public class Icons {
-    private String name, name1, name2, name3, name4, name5, name6, name7, name8, name9, name10, name11, name12, name13, name14, name15, name16, name17, name18, seller1, seller2, price1, price2, product1, product11, product2, product21;
+    private String name, name1, name2, name3, name4, name5, name6, name7, name8, name9, name10, name11, name12, name13, name14, name15, name16, name17, name18, seller1, seller2, price1, price2, product1, product11, product2, product21, supermarket, baby, digital, food, life, global, member, coupon, spike, integral;
 
     public String getName() {
         return name;
@@ -85,4 +85,43 @@ public class Icons {
         return product21;
     }
 
+    public String getSupermarket() {
+        return supermarket;
+    }
+
+    public String getBaby() {
+        return baby;
+    }
+
+    public String getDigital() {
+        return digital;
+    }
+
+    public String getFood() {
+        return food;
+    }
+
+    public String getLife() {
+        return life;
+    }
+
+    public String getGlobal() {
+        return global;
+    }
+
+    public String getMember() {
+        return member;
+    }
+
+    public String getCoupon() {
+        return coupon;
+    }
+
+    public String getSpike() {
+        return spike;
+    }
+
+    public String getIntegral() {
+        return integral;
+    }
 }

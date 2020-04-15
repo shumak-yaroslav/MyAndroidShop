@@ -13,9 +13,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Notification extends AppCompatActivity {
     private BottomNavigationView bnv;
+    private ImageView img;
 
 
     @Override
@@ -25,8 +27,22 @@ public class Notification extends AppCompatActivity {
         bnv = (BottomNavigationView)findViewById(R.id.bottomNavigationView3);
         bnv.setOnNavigationItemSelectedListener(getBottomNavigationListener());
         bnv.setSelectedItemId(R.id.action_notification);
-
+        img = (ImageView)findViewById(R.id.imageView16);
+        imageClick();
     }
+
+    public void imageClick () {
+        img.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Notification.this, Basket.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener getBottomNavigationListener() {
         return new BottomNavigationView.OnNavigationItemSelectedListener() {

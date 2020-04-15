@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Basket"
+            android:label="@string/title_activity_basket"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Discounts"
             android:label="@string/title_activity_discounts"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Search"
             android:label="@string/title_activity_search"

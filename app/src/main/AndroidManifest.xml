@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".creditcard"
+            android:label="@string/title_activity_creditcard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".payment"
+            android:label="@string/title_activity_payment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Basket"
             android:label="@string/title_activity_basket"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Discounts"
             android:label="@string/title_activity_discounts"

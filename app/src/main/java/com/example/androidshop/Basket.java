@@ -19,6 +19,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +27,7 @@ public class Basket extends AppCompatActivity {
     private BottomNavigationView bnv;
     ImageView img, img1, img2, img3, img4;
     TextView text1, text2, text3, text4, text5, text6, text7, text8;
+    Button btn;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
     private DatabaseReference first = databaseReference.child("Icons");
@@ -37,6 +39,7 @@ public class Basket extends AppCompatActivity {
         bnv = (BottomNavigationView)findViewById(R.id.bottomNavigationView3);
         bnv.setOnNavigationItemSelectedListener(getBottomNavigationListener());
         bnv.setSelectedItemId(R.id.action_coupons);
+        btn = (Button)findViewById(R.id.button3);
         img=findViewById(R.id.imageView16);
         img1=findViewById(R.id.imageView19);
         img2=findViewById(R.id.imageView55);
@@ -64,6 +67,7 @@ public class Basket extends AppCompatActivity {
         Glide.with(getApplicationContext()).load(url3).into(img3);
         Glide.with(getApplicationContext()).load(url4).into(img4);
         imageClick();
+        btnClick();
 
     }
 
@@ -73,6 +77,18 @@ public class Basket extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Basket.this, Search.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+    public void btnClick () {
+        btn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Basket.this, payment.class);
                         startActivity(intent);
                     }
                 }

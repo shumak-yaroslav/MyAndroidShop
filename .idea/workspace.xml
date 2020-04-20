@@ -29,8 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -41,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_XL_API_R" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-19T12:57:32.526Z" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout-xlarge" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -55,11 +56,11 @@
       <recent name="com.example.androidshop" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/menu" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout-xlarge" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout-small" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout-normal" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout-large" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
   <component name="RunDashboard">

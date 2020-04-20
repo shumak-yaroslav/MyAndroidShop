@@ -18,4 +18,16 @@
     <string name="title_activity_basket">Basket</string>
     <string name="title_activity_payment">payment</string>
     <string name="title_activity_creditcard">creditcard</string>
+    <string name="title_activity_customers">Customers</string>
+    <string name="title_activity_orders">Orders</string>
+    <string name="title_activity_products">Products</string>
+    <string name="title_activity_sales">Sales</string>
+    <string name="title_activity_tasks">Tasks</string>
+    <string name="title_activity_customer1">Customer1</string>
+    <string name="title_activity_task1">Task1</string>
+    <string name="title_activity_product1">Product1</string>
+    <string name="title_activity_order1">Order1</string>
+
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
 </resources>

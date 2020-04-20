@@ -9,10 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Feed">
+        </activity>
+        <activity
+            android:name=".Order1"
+            android:label="@string/title_activity_order1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Product1"
+            android:label="@string/title_activity_product1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Task1"
+            android:label="@string/title_activity_task1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer1"
+            android:label="@string/title_activity_customer1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tasks"
+            android:label="@string/title_activity_tasks"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Sales"
+            android:label="@string/title_activity_sales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Products"
+            android:label="@string/title_activity_products"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Orders"
+            android:label="@string/title_activity_orders"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customers"
+            android:label="@string/title_activity_customers"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".creditcard"
             android:label="@string/title_activity_creditcard"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".payment"
             android:label="@string/title_activity_payment"

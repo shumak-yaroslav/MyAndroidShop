@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="Home"
-                        android:textColor="#0088ff"
+                        android:textColor="#2196F3"
                         android:textSize="20sp" />
 
                     <TextView
@@ -94,7 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear1">
 
                 <ImageView
                     android:id="@+id/imageView102"
@@ -102,7 +103,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -149,7 +150,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear2">
 
                 <ImageView
                     android:id="@+id/imageView101"
@@ -157,7 +159,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -204,7 +206,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear3">
 
                 <ImageView
                     android:id="@+id/imageView012"
@@ -212,7 +215,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -259,7 +262,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear4">
 
                 <ImageView
                     android:id="@+id/imageView011"
@@ -267,7 +271,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                   />
 
             </LinearLayout>
 
@@ -314,7 +318,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear5">
 
                 <ImageView
                     android:id="@+id/imageView120"
@@ -322,7 +327,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -369,7 +374,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear6">
 
                 <ImageView
                     android:id="@+id/imageView110"
@@ -377,7 +383,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                   />
 
             </LinearLayout>
 
@@ -423,7 +429,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear7">
 
                 <ImageView
                     android:id="@+id/imageView0012"
@@ -431,7 +438,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -478,7 +485,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear8">
 
                 <ImageView
                     android:id="@+id/imageView0011"
@@ -486,7 +494,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -504,7 +512,7 @@
                     android:layout_width="332dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="JSkater Dress 8"
+                    android:text="Skater Dress 8"
                     android:textColor="#000000"
                     android:textSize="14sp" />
 
@@ -533,7 +541,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear9">
 
                 <ImageView
                     android:id="@+id/imageView12"
@@ -541,7 +550,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -588,7 +597,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear10">
 
                 <ImageView
                     android:id="@+id/imageView11"
@@ -596,7 +606,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 
@@ -642,7 +652,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/cor11"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/linear11">
 
                 <ImageView
                     android:id="@+id/imageView1100"
@@ -650,7 +661,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/face"/>
+                    />
 
             </LinearLayout>
 

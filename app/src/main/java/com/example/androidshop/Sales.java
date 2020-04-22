@@ -6,17 +6,28 @@ import android.os.Bundle;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Sales extends AppCompatActivity {
     LinearLayout linear1, linear2, linear3, linear4, linear5, linear6, linear7, linear8, linear9, linear10, linear11;
     ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13;
+    TextView text1, text2, text3;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    private DatabaseReference first = databaseReference.child("AdminLayouts");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +77,10 @@ public class Sales extends AppCompatActivity {
         Glide.with(getApplicationContext()).load(url).into(img11);
         Glide.with(getApplicationContext()).load(url1).into(img12);
         Glide.with(getApplicationContext()).load(url2).into(img13);
+
+        text1=(TextView)findViewById(R.id.textView202);
+        text2=(TextView)findViewById(R.id.textView203);
+        text3=(TextView)findViewById(R.id.textView501);
 
         imageClick1();
         imageClick2();
@@ -210,6 +225,38 @@ public class Sales extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        first.addValueEventListener (new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for ( DataSnapshot Subsnapshot : dataSnapshot.getChildren()) {
+                    AdminLayouts adminLayouts = Subsnapshot.getValue(AdminLayouts.class);
+                    String ShowData = adminLayouts.getSale1();
+                    String ShowData1 = adminLayouts.getSale1Info();
+                    String ShowData2 = adminLayouts.getSale1Status();
+                    text1.setText(ShowData);
+                    text2.setText(ShowData1);
+                    text3.setText(ShowData2);
+
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                /*Intent intent3 = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent3);*/
+            }
+        });
+
     }
 
 }

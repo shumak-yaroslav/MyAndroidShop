@@ -6,7 +6,13 @@ import android.os.Bundle;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -15,9 +21,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Task1 extends AppCompatActivity {
-    ImageView img1;
-    TextView text1;
-    ImageView img;
+    ImageView img, img1;
+    TextView text1, text2;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    private DatabaseReference first = databaseReference.child("AdminLayouts");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,7 @@ public class Task1 extends AppCompatActivity {
 
         img1=(ImageView)findViewById(R.id.imageView016);
         text1=(TextView)findViewById(R.id.textView0016);
+        text2=(TextView)findViewById(R.id.textView65);
         img=(ImageView)findViewById(R.id.imageView21);
 
         String url = "https://firebasestorage.googleapis.com/v0/b/androidshop-6672b.appspot.com/o/admin_img%2Fadmin.png?alt=media&token=81f8dd8e-a42f-4f75-a567-ac029ee07fa3";
@@ -60,6 +69,33 @@ public class Task1 extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        first.addValueEventListener (new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for ( DataSnapshot Subsnapshot : dataSnapshot.getChildren()) {
+                    AdminLayouts adminLayouts = Subsnapshot.getValue(AdminLayouts.class);
+                    String ShowData1 = adminLayouts.getTask1Title();
+                    text2.setText(ShowData1);
+
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                /*Intent intent3 = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent3);*/
+            }
+        });
+
     }
 
 }

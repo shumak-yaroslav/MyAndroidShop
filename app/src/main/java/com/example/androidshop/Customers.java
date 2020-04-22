@@ -6,17 +6,28 @@ import android.os.Bundle;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Customers extends AppCompatActivity {
     LinearLayout linear1, linear2, linear3, linear4, linear5, linear6, linear7, linear8, linear9, linear10, linear11;
     ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13;
+    TextView text1, text2, text3;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    private DatabaseReference first = databaseReference.child("AdminLayouts");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +59,10 @@ public class Customers extends AppCompatActivity {
         img11=(ImageView)findViewById(R.id.imageView1100);
         img12=(ImageView)findViewById(R.id.imageView016);
         img13=(ImageView)findViewById(R.id.imageView16);
+
+        text1=(TextView)findViewById(R.id.textView202);
+        text2=(TextView)findViewById(R.id.textView203);
+        text3=(TextView)findViewById(R.id.textView501);
 
         String url = "https://firebasestorage.googleapis.com/v0/b/androidshop-6672b.appspot.com/o/admin_img%2Fadmin1.png?alt=media&token=bb71ac10-21a6-48e6-bd56-7c4e58c56b39";
         String url1 = "https://firebasestorage.googleapis.com/v0/b/androidshop-6672b.appspot.com/o/admin_img%2FVector.png?alt=media&token=5a33a36d-1ab2-4861-9760-e943b322b412";
@@ -211,6 +226,37 @@ public class Customers extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        first.addValueEventListener (new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for ( DataSnapshot Subsnapshot : dataSnapshot.getChildren()) {
+                    AdminLayouts adminLayouts = Subsnapshot.getValue(AdminLayouts.class);
+                    String ShowData = adminLayouts.getCustomer1();
+                    String ShowData1 = adminLayouts.getCustomer1Info();
+                    String ShowData2 = adminLayouts.getCustomer1Date();
+                    text1.setText(ShowData);
+                    text2.setText(ShowData1);
+                    text3.setText(ShowData2);
+
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                /*Intent intent3 = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent3);*/
+            }
+        });
+
     }
 
 }

@@ -8,14 +8,12 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="475dp"
-        android:layout_height="740dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="920dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="600dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -32,18 +30,18 @@
                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="35dp"
                     android:layout_marginTop="10dp"
                     tools:ignore="MissingConstraints">
 
                     <TextView
                         android:id="@+id/spCity"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:text="Los Angeles"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         tools:ignore="MissingConstraints" />
 
                     <ImageView
@@ -61,7 +59,7 @@
                         android:layout_width="30dp"
                         android:layout_height="25dp"
                         android:layout_gravity="bottom"
-                        android:layout_marginLeft="70dp" />
+                        android:layout_marginLeft="180dp" />
 
                     <ImageView
                         android:id="@+id/imageView4"
@@ -73,8 +71,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="434dp"
-                    android:layout_height="44dp"
+                    android:layout_width="534dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -85,13 +83,13 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        android:layout_width="match_parent"
+                        android:layout_width="534dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/corner"
                         android:hint=" &#128269; Please enter the product, brand, store"
-                        android:paddingLeft="75dp"
+                        android:paddingLeft="25dp"
                         android:paddingTop="11dp"
-                        android:textSize="16sp">
+                        android:textSize="20sp">
 
                     </TextView>
 
@@ -99,7 +97,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="434dp"
+                    android:layout_width="534dp"
                     android:layout_height="178dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
@@ -127,7 +125,7 @@
                 </LinearLayout>
 
                 <TableLayout
-                    android:layout_width="434dp"
+                    android:layout_width="534dp"
                     android:layout_height="157dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp">
@@ -315,7 +313,7 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout14"
-                android:layout_width="475dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#F5F5F5"
                 android:orientation="vertical"
@@ -325,7 +323,7 @@
                 tools:ignore="MissingConstraints">
 
                 <LinearLayout
-                    android:layout_width="434dp"
+                    android:layout_width="534dp"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
@@ -351,13 +349,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="434dp"
+                    android:layout_width="534dp"
                     android:layout_height="325dp"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="205dp"
+                        android:layout_width="255dp"
                         android:layout_height="300dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/corner_for_back"
@@ -365,7 +363,7 @@
 
                         <ImageView
                             android:id="@+id/lipstick"
-                            android:layout_width="150dp"
+                            android:layout_width="200dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center" />
 
@@ -407,7 +405,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="205dp"
+                        android:layout_width="255dp"
                         android:layout_height="300dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="20dp"
@@ -416,7 +414,7 @@
 
                         <ImageView
                             android:id="@+id/lotion"
-                            android:layout_width="150dp"
+                            android:layout_width="200dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center" />
 
@@ -465,7 +463,7 @@
         android:id="@+id/bottomNavigationView3"
         android:layout_width="0dp"
         android:layout_height="63dp"
-        android:layout_marginTop="740dp"
+        android:layout_marginTop="910dp"
         android:background="#FFFFFF"
         app:menu="@menu/bottom_navigation_main"
         app:layout_constraintEnd_toEndOf="parent"

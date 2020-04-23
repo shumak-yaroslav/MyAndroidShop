@@ -16,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_XL_API_R" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_C_API_R_2" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -43,8 +43,8 @@
   </component>
   <component name="ProjectId" id="1aaLSkoswlP2zaP2jOrhLVetbpH" />
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_XL_API_R" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-19T12:57:32.526Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_C_API_R_2" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-23T15:02:13.629Z" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout-xlarge" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />

@@ -98,7 +98,7 @@
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="105dp"
+                android:layout_marginLeft="115dp"
                 android:text="$0.00"
                 android:textColor="#000000"
                 android:textSize="30sp" />
@@ -121,7 +121,7 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="105dp"
+                android:layout_marginLeft="115dp"
                 android:text="90 Day Total"
                 android:textColor="#887373" />
             <TextView
@@ -166,7 +166,7 @@
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="135dp"
+                android:layout_marginLeft="145dp"
                 android:text="0"
                 android:textColor="#000000"
                 android:textSize="30sp" />
@@ -197,7 +197,7 @@
                 android:id="@+id/textView27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="127dp"
+                android:layout_marginLeft="137dp"
                 android:text="Sold"
                 android:textColor="#887373" />
 
@@ -215,7 +215,7 @@
         android:id="@+id/view2"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="375dp"
+        android:layout_marginLeft="385dp"
         android:layout_marginTop="240dp"
         android:layout_marginBottom="338dp"
         android:background="#E1D9D9" />
@@ -240,7 +240,7 @@
         android:id="@+id/bottomNavigationView3"
         android:layout_width="wrap_content"
         android:layout_height="63dp"
-        android:layout_marginTop="900dp"
+        android:layout_marginTop="830dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

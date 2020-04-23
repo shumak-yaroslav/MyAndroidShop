@@ -9,7 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="1190dp"
+        android:layout_height="1150dp"
         tools:ignore="MissingConstraints">
 
 
@@ -338,7 +338,7 @@
         android:id="@+id/bottomNavigationView4"
         android:layout_width="0dp"
         android:layout_height="63dp"
-        android:layout_marginTop="1223dp"
+        android:layout_marginTop="1150dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
